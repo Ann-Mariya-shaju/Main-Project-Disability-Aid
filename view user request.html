@@ -1,4 +1,4 @@
-{% extends 'transport/index.html' %}
+{% extends 'panchayath/index.html' %}
 {% block body %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -32,8 +32,8 @@
 {#    <td>{{ i.place }}<br/>{{ i.post }}<br/>{{ i.pin }}</td>#}
 {#    <td>{{ i.dob }}</td>#}
 {#    <td>{{ i.age }}</td>#}
-    <td align="center"><a class="btn btn-success py-3 px-5" href="/approve_concession/{{ i.id }}#aaa" >approve</a></td>
-    <td align="center"><a class="btn btn-danger py-3 px-5" href="/reject_concession/{{ i.LOGIN.id }}#aaa" >reject</a></td>
+    <td align="center"><a class="btn btn-success py-3 px-5" href="/approve_concession/{{ i.id }}#aaa" onclick="return confirm('Are you sure?')">approve</a></td>
+    <td align="center"><a class="btn btn-danger py-3 px-5" href="/reject_concession/{{ i.LOGIN.id }}#aaa" onclick="return confirm('Are you sure?')">reject</a></td>
 {#    <td><a href="/neurologist_approve/{{ i.LOGIN.id }}">block</a></td>#}
   </tr>
     {% endfor %}
@@ -41,6 +41,3 @@
 </body>
 </html>
 {% endblock %}
-
-
-#onclick="return confirm('Are you sure?')"    onclick="return confirm('Are you sure?')"
