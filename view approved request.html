@@ -14,8 +14,7 @@
     <th scope="col">USER INFO</th>
     <th scope="col">DATE</th>
     <th scope="col">FILE</th>
-    <th scope="col">APPROVE</th>
-    <th scope="col">REJECT</th>
+    <th scope="col"></th>
   </tr>
     {% for i in data %}
   <tr>
@@ -23,9 +22,7 @@
     <td>{{ i.USER.name }}<BR>Ph : {{ i.USER.name }}</td>
     <td>{{ i.date }}</td>
     <td><a href="{{ i.office }}" target="_blank">View File</a> </td>
-    <td align="center"><a class="btn btn-success py-3 px-5" href="/pan_appr_request/{{ i.id }}#aaa" onclick="return confirm('Are you sure?')">approve</a></td>
-    <td align="center"><a class="btn btn-danger py-3 px-5" href="/pan_rej_request/{{ i.id }}#aaa" onclick="return confirm('Are you sure?')">reject</a></td>
-{#    <td><a href="/neurologist_approve/{{ i.LOGIN.id }}">block</a></td>#}
+    <td><a href="/panchayat_grant_pension/{{ i.id }}#aaa">Grant Pension</a> </td>
   </tr>
     {% endfor %}
 </table>
