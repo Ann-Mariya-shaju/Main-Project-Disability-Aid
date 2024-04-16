@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="/static/css/aos.css">
   <link rel="stylesheet" href="/static/css/style.css">
 
-  <title>Disability Aid</title>
+  <title>Learner Free Bootstrap Template by Untree.co</title>
 </head>
 
 <body>
@@ -57,16 +57,16 @@
             <a href="#" class="small mr-3"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block">info@mydomain.com</span></a> 
           </div>
 
-{#          <div class="col-6 col-lg-3 text-right">#}
-{#            <a href="login.html" class="small mr-3">#}
-{#              <span class="icon-lock"></span>#}
-{#              Log In#}
-{#            </a>#}
-{#            <a href="register.html" class="small">#}
-{#              <span class="icon-person"></span>#}
-{#              Register#}
-{#            </a>#}
-{#          </div>#}
+          <div class="col-6 col-lg-3 text-right">
+            <a href="login.html" class="small mr-3">
+              <span class="icon-lock"></span>
+              Log In
+            </a>
+            <a href="register.html" class="small">
+              <span class="icon-person"></span>
+              Register
+            </a>
+          </div>
 
         </div>
       </div>
@@ -74,17 +74,38 @@
     <div class="sticky-nav js-sticky-header">
       <div class="container position-relative">
         <div class="site-navigation text-center">
-          <a href="/panchayat_home" class="logo menu-absolute m-0">Disability Aid<span class="text-primary">.</span></a>
-
+          <a href="index.html" class="logo menu-absolute m-0">Disability Aid<span class="text-primary">.</span></a>
 
           <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
-            <li class="active"><a href="/panchayat_home">Home</a></li>
-            <li><a href="/panchayat_view_requests#abcd">User Requests</a></li>
-            <li><a href="/panchayat_view_appr_requests#abcd">Approved Requests</a></li>
+            <li class="active"><a href="/transport_home">Home</a></li>
+{#            <li class="has-children">#}
+{#              <a href="#">Transport</a>#}
+{#              <ul class="dropdown">#}
+{#                <li><a href="/add_transport#aaa">Add</a></li>#}
+{#                <li><a href="/view_transport#aaa">View</a></li>#}
+{#              </ul>#}
+{#            </li>#}
+{#            <li class="has-children">#}
+{#              <a href="#">Hospital</a>#}
+{#              <ul class="dropdown">#}
+{#                <li><a href="/add_hospital#aaa">Add</a></li>#}
+{#                <li><a href="/view_hospital#aaa">View</a></li>#}
+{#              </ul>#}
+{#            </li>#}
+{#            <li class="has-children">#}
+{#              <a href="#">Panchayat</a>#}
+{#              <ul class="dropdown">#}
+{#                <li><a href="/add_panchayat#aaa">Add</a></li>#}
+{#                <li><a href="/view_panchayat#aaa">View</a></li>#}
+{#              </ul>#}
+{#            </li>#}
+{#            <li><a href="staff.html">Our Staff</a></li>#}
 {#            <li><a href="news.html">News</a></li>#}
 {#            <li><a href="gallery.html">Gallery</a></li>#}
 {#            <li><a href="about.html">About</a></li>#}
-{#            <li><a href="/change_password#aaa">Change Password</a></li>#}
+            <li><a href="/view_user_request#aaa">Request</a></li>
+            <li><a href="/view_user_request_status#aaa">Status</a></li>
+            <li><a href="/change_password#aaa">Change Password</a></li>
           </ul>
 
           <a href="/logout" onclick="return confirm('are you sure!?');" class="btn-book btn btn-secondary btn-sm menu-absolute">Logout</a>
@@ -110,10 +131,10 @@
           <div class="row justify-content-center ">
 
             <div class="col-lg-6 text-center ">
-             <!-- <a href="#" href="https://vimeo.com/342333493" data-fancybox data-aos="fade-up" data-aos-delay="0" class="caption mb-4 d-inline-block">Watch the video</a>-->
+              <!--<a href="#" href="https://vimeo.com/342333493" data-fancybox data-aos="fade-up" data-aos-delay="0" class="caption mb-4 d-inline-block">Watch the video</a>-->
 
               <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">DISABILITY AID</h1>
-             <!-- <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-secondary">Explore courses</a></p>-->
+              <!--<p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-secondary">Explore courses</a></p>-->
 
             </div>
 
@@ -127,8 +148,8 @@
 
   </div> <!-- /.untree_co-hero -->
 
-    <div align="center" class="py-5" id="abcd">
-        <div align="center" class="col-11 bg-primary-light py-5 px-5 border border-primary rounded">
+    <div align="center" class="py-5" >
+        <div align="center" class="col-11 bg-primary-light py-5 px-5 border border-primary rounded" id="aaa">
             <h1 class="mb-4 heading text-primary py-2" data-aos="fade-up" data-aos-delay="100">{{ request.session.head }}</h1>
 
             {% block body %}
